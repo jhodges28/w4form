@@ -1,0 +1,45 @@
+/* Header */
+
+.masthead {
+  background-color: darken($primary-color,10%);
+  height: 70px;
+  
+  nav {
+    
+    // this stack controls the logo and nav areas
+    ul {
+      display: inline;
+      margin: 0; // kill any default margins
+      padding: 0; // kill any default padding
+      
+      li {
+        display: inline-block;
+        
+        a {
+          line-height: 70px;
+          color: $neutral-color;
+          padding: 0 1em;
+          display: block;
+          
+          &:hover {
+            background-color: $secondary-color;
+          }
+        }
+        
+        // site title, resize to fit in nav
+        h1 {
+          margin: 0;
+          font-size: inherit;
+        }
+        
+        // hide the children elements for now
+        &.has-dropdown {
+          
+          ul {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

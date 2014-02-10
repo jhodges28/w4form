@@ -1,0 +1,115 @@
+/* Beanstalk Felxible Grid 
+ *
+ * A flexible, responsive grid system built with style using Sass.
+ *
+ * Made by Caleb Sylvest
+ * www.calebsylvest.com
+ *
+ */
+
+$row-width: 960px !default;
+$column-gutter: 0.9375em !default;
+$total-columns: 12 !default;
+$show-grid: false !default;
+
+.row {
+  width: 100%;
+  max-width: $row-width;
+  margin: 0 auto;
+  
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  
+  .row {
+    width: auto;
+    margin-left: -($column-gutter);
+    margin-right: -($column-gutter);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  &.collapse > .column,
+  &.collapse > .columns {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  &.collapse-outer > .column,
+  &.collapse-outer > .columns {  
+    
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  padding-left: $column-gutter;
+  padding-right: $column-gutter;
+  position: relative;
+}
+
+//
+// Column-widths created dynamically
+//
+
+// generate small grid classes
+@for $i from 1 through $total-columns {
+  .small-col-#{$i} {
+    width: ((100 / $total-columns) * $i) * 1%;
+  }
+}
+
+@media screen and (min-width: $small-screen) {
+  
+  // generate flexible grid above mobile  
+  @for $i from 1 through $total-columns {
+    .col-#{$i} {
+      width: ((100 / $total-columns) * $i) * 1%;
+    }
+  }
+  
+  // generate push grid options
+  @for $i from 1 through $total-columns {
+    .push-#{$i} {
+      position: relative;
+      left: ((100 / $total-columns) * $i) * 1%;
+      right: auto;
+    }
+  }
+  
+  // generate pull grid options
+  @for $i from 1 through $total-columns {
+    .pull-#{$i} {
+      position: relative;
+      right: ((100 / $total-columns) * $i) * 1%;
+      left: auto;
+    }
+  }
+}
+
+// if $show-grid is set to true all grid columns will 
+// be visible, just for test or example purposes
+.column,
+.columns {
+
+  @if $show-grid == true {
+  background-color: rgba(246,191,222,.6);
+  border: 1px solid red;
+  border-top: none;
+  border-bottom: none;
+  }
+  
+} 
