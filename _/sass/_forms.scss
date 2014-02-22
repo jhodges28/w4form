@@ -1,0 +1,64 @@
+/* Forms */
+
+.btn-submit {
+	width: 150px;
+	float: left;
+	margin: 2% 0;
+	border: 0;
+	padding: 10px 25px;
+	color: #faf3bc;
+	font-size: .75em;
+	background-color: #4fb69f;
+	border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	text-transform: uppercase;
+}
+
+label, input, textarea, span {
+		float: left;
+
+	}
+	label {
+		width: 100%%;
+		margin: 1% 0;
+	}
+	input[type=text], textarea {
+		width: 60%;
+		background-color: #efefef;
+		color: #323232;
+
+	}
+	input, textarea {
+		padding: 1%;
+		border: 0;
+		border-radius: 3px;
+	}
+	input:focus, textarea:focus { 
+		outline: none;
+		border: 0;
+	}
+	.required {
+	}
+	textarea {
+		height: 150px;
+	}
+	p {
+		clear:both;
+		min-height: 25px;
+	}
+	#form span {
+		border-radius: 20px;
+		margin-left:15px;
+		padding: 8px 35px;
+		background: #faf3bc;
+		color:#420600;
+	}
+	#form span.valid {
+		background-color :#c0ce51;
+		color: #faf3bc;
+	}
+	#form span.error {
+		background-color:#b0240f;
+		color: #faf3bc;
+	}

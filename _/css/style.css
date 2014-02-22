@@ -1222,3 +1222,83 @@ abbr {
 .hero {
   background-color: #b2d234;
 }
+
+/* Forms */
+/* line 3, ../sass/_forms.scss */
+.btn-submit {
+  width: 150px;
+  float: left;
+  margin: 2% 0;
+  border: 0;
+  padding: 10px 25px;
+  color: #faf3bc;
+  font-size: .75em;
+  background-color: #4fb69f;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  text-transform: uppercase;
+}
+
+/* line 18, ../sass/_forms.scss */
+label, input, textarea, span {
+  float: left;
+}
+
+/* line 22, ../sass/_forms.scss */
+label {
+  width: 100%%;
+  margin: 1% 0;
+}
+
+/* line 26, ../sass/_forms.scss */
+input[type=text], textarea {
+  width: 60%;
+  background-color: #efefef;
+  color: #323232;
+}
+
+/* line 32, ../sass/_forms.scss */
+input, textarea {
+  padding: 1%;
+  border: 0;
+  border-radius: 3px;
+}
+
+/* line 37, ../sass/_forms.scss */
+input:focus, textarea:focus {
+  outline: none;
+  border: 0;
+}
+
+/* line 43, ../sass/_forms.scss */
+textarea {
+  height: 150px;
+}
+
+/* line 46, ../sass/_forms.scss */
+p {
+  clear: both;
+  min-height: 25px;
+}
+
+/* line 50, ../sass/_forms.scss */
+#form span {
+  border-radius: 20px;
+  margin-left: 15px;
+  padding: 8px 35px;
+  background: #faf3bc;
+  color: #420600;
+}
+
+/* line 57, ../sass/_forms.scss */
+#form span.valid {
+  background-color: #c0ce51;
+  color: #faf3bc;
+}
+
+/* line 61, ../sass/_forms.scss */
+#form span.error {
+  background-color: #b0240f;
+  color: #faf3bc;
+}
